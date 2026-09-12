@@ -1,0 +1,183 @@
+/* ---------- Regla de oro: box-sizing va primero, siempre ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #2b1c14;
+  background-color: #f7efe3;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================================
+   HEADER + NAV  -->  FLEXBOX (una sola fila)
+   ============================================================ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff6ec;
+  border-bottom: 2px solid #7a2e1d;
+  padding: 22px 60px;
+}
+
+header .logo {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #7a2e1d;
+}
+
+header nav {
+  display: flex;
+  gap: 32px;
+}
+
+header nav a:hover {
+  color: #e8a33d;
+}
+
+/* ============================================================
+   HERO  -->  FLEXBOX (una columna centrada)
+   ============================================================ */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #7a2e1d;
+  color: #fdf1e6;
+  padding: 100px 40px;
+  gap: 18px;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero p {
+  max-width: 520px;
+  font-size: 16px;
+  color: #f0cdb8;
+  line-height: 1.6;
+}
+
+.boton {
+  background-color: #e8a33d;
+  color: #5a2213;
+  font-weight: bold;
+  padding: 12px 28px;
+  border: 2px solid #e8a33d;
+}
+
+.boton:hover {
+  background-color: #7a2e1d;
+  color: #e8a33d;
+}
+
+/* ============================================================
+   RECETAS  -->  GRID (filas y columnas de tarjetas)
+   ============================================================ */
+.recetas {
+  padding: 70px 60px;
+}
+
+.recetas h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #7a2e1d;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.tarjeta {
+  background-color: #fffaf3;
+  border: 1px solid #7a2e1d;
+  padding: 24px 20px;
+}
+
+.tarjeta h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+  color: #7a2e1d;
+}
+
+.tarjeta p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4a3327;
+}
+
+/* ============================================================
+   SOBRE MI  -->  GRID (dos columnas: texto + visual)
+   ============================================================ */
+.sobre-mi {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 70px 60px;
+  background-color: #fff6ec;
+}
+
+.sobre-mi h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #7a2e1d;
+}
+
+.sobre-mi p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #3a271c;
+  margin-bottom: 16px;
+}
+
+.plato {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+}
+
+.anillo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 3px solid #e8a33d;
+  border-radius: 50%;
+}
+
+.anillo-1 { width: 240px; height: 240px; margin-top: -120px; margin-left: -120px; }
+.anillo-2 { width: 165px; height: 165px; margin-top: -82px;  margin-left: -82px;  border-color: #7a2e1d; }
+.anillo-3 { width: 90px;  height: 90px;  margin-top: -45px;  margin-left: -45px;  background-color: #7a2e1d; border-color: #7a2e1d; }
+
+/* ============================================================
+   FOOTER  -->  bloque simple, centrado
+   ============================================================ */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7a2e1d;
+  color: #fdf1e6;
+  padding: 24px;
+  font-size: 13px;
+}
